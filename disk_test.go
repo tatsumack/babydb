@@ -75,6 +75,7 @@ func TestDiskManager_WriteAndReadPage(t *testing.T) {
 
 			buf := make([]byte, len(tt.args.bytes))
 			err = d.ReadPage(tt.args.pageID, buf)
+			assert.NoError(t, err)
 			assert.Equal(t, tt.want, buf)
 		})
 	}
