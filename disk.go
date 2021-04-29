@@ -7,7 +7,9 @@ import (
 	"golang.org/x/xerrors"
 )
 
-type PageID uint64
+type PageID int64
+
+const PageIDInvalid = -1
 
 const PageSize uint64 = 4096
 
